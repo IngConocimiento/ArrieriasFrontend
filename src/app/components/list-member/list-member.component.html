@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <!--Creation Navbar in list member-->
+    <app-navbar (filter)="dataSearch($event)"></app-navbar> 
+     
+    <div class="row mt-2">
+      <div class="col">      
+          <!-- Table members in house select-->
+          <table class="table " >
+            <thead class="table-light">
+              <tr >
+                <!--Create Columns -->
+                <th> N°</th>
+                <th  > Name <i class="fa fa-sort" aria-hidden="true" (click)="getListOrderedMemberName()"></i></th>
+                <th> Gender <i class="fa fa-sort" aria-hidden="true" (click)="getListOrderMemberGender()"></i> </th>
+                <th> Ancestry </th>
+                <th> HairColour </th>
+                <th> Image </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor= 'let studen of  listStudent | search:filter; let count=index' table class="table-light">
+                <td >{{count+1}}</td>   <!--  count Column -->
+                <td >{{studen.name}}  </td>  <!-- Name Column -->               
+                <td>{{studen.gender}}</td>   <!-- Gender Column -->
+                <td>{{studen.ancestry}}</td>  <!-- Ancestry Column -->
+                <td>{{studen.hairColour}}</td>  <!-- HairColour Column -->
+                <td><img src="{{studen.image}}"  width="100"></td><!-- Image Column -->
+              </tr>          
+            </tbody>  
+            </table>
+      </div>      
+    </div>
+</div>
+
+
+

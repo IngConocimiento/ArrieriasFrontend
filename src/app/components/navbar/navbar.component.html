@@ -1,0 +1,25 @@
+<!--Creation Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">    
+    <div class="collapse navbar-collapse" >
+      <h4 class="navbar-brand ">Magician School Education </h4>
+      <!-- Return Button -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"> 
+            <i class="far fa-arrow-alt-circle-left" routerLink="/"></i>    
+            <span> Houses</span> 
+          </a>
+         <!--<i class="fas fa-arrow-alt-circle-up" routerLink="/"> 
+                       
+          </i>-->
+        </li>           
+      </ul>
+      <!-- Filter creation to search by name and gender-->
+      <form class="d-flex" >
+        <input class="form-control " type="text" name="filter" placeholder="Filter Member"
+         [(ngModel)]="search" (ngModelChange)="updateSearch()">      
+      </form>
+    </div>
+  </div>
+</nav>

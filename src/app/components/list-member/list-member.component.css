@@ -1,0 +1,15 @@
+.row1{
+    background-color: brown;
+}
+
+
+table thead th i{
+    cursor: pointer !important;
+}
+
+.table-light{
+    background-color: rgb(26, 23, 23);
+}
+.container{
+    width: 80%;
+}
