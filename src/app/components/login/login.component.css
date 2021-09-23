@@ -1,0 +1,70 @@
+.fondo-login {
+    padding: calculateRem(15px);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.box {
+    background: #444444;
+    text-align: center;
+    border: solid 0.1rem #000;
+    border-radius: 3%;
+}
+
+.box h5 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 20rem;
+}
+
+.box input[type="email"],
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 16rem;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type="email"]:focus,
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 15rem;
+    border-color: #2ecc71;
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #ffffff;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+    background: #009eab;
+}
+
+::placeholder {
+    color: #fff;
+    /*font-style: italic;*/
+}
+
+.input-material {
+    width: 60%;
+}
