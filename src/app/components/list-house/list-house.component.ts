@@ -13,11 +13,11 @@ export class ListHouseComponent implements OnInit {
   public selectHouse ;  // Save the selected house
   public loading= false; // Visualize in loading
   public selectNotHouse=false; // Variable for warning
-   
 
-  constructor(private _dataPeople: DataPeopleService, private router: Router) { 
-    this.selectHouse='-- -- --';
-    
+
+  constructor(private _dataPeople: DataPeopleService, private router: Router) {
+    this.selectHouse='Seleccione Una Opción';
+
   }
   /**
    * Created methods are initialized
@@ -31,13 +31,10 @@ export class ListHouseComponent implements OnInit {
    * Recoore the list of causes to eliminate repeated houses
    */
   public getAllHouse(){
-    this._dataPeople.getAllHouse().subscribe(data =>{
-      for (let clave of data){
-        if(this.listHouse.find(x=>x==clave.house)==undefined){
-          this.listHouse.push(clave.house);
-        }     
-      }
-    })
+
+    this.listHouse = ['ARANZAZU “Faro del norte”','SALAMINA  “Ciudad luz”','PÁCORA “Ciudad de agua”','AGUADAS “Ciudad de las brumas”'];
+
+
   }
 
   /**
@@ -49,16 +46,16 @@ export class ListHouseComponent implements OnInit {
    */
   public getAllListMemberHouse(){
     if(this.selectHouse!='' && this.selectHouse!='-- -- --'){
-      this.loading= true;     
+      this.loading= true;
       this.selectNotHouse=false;
       setTimeout(() => {
         this.router.navigate(['/listMember', this.selectHouse]);
         this.loading=false;
       }, 2000);
-     
+
     }else{
       this.selectHouse='-- -- --';
       this.selectNotHouse=true;
-    }   
+    }
   }
 }

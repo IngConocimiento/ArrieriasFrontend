@@ -1,0 +1,65 @@
+<section class="fondo-login">
+    <div class="row">
+        <div class="col-lg-6 col-sm-8 col-10 p-5  pt-sm-5 m-auto pt-lg-5">
+            <form class="box" #formLogin="ngForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <h5>Iniciar Sesión</h5>
+
+                <div>
+                    <mat-form-field class="input-material ">
+
+                        <mat-label class="text-light">Usuario</mat-label>
+
+                        <input type="email" matInput [formControl]="emailFormControl" formControlName="email" placeholder=" ejemplo@gmail.com ">
+
+                        <mat-error *ngIf="emailFormControl.hasError( 'email') && !emailFormControl.hasError('required') " class="text-warning ">
+                            Usuario Inválido
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required') " class="text-warning ">
+                            Campo Obligatorio
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+
+
+                <div>
+                    <mat-form-field class="input-material ">
+
+                        <mat-label class="text-light ">Contraseña</mat-label>
+
+                        <input class="mr-lg-0 " matInput [type]="hide ? 'password' : 'text' " matInput [formControl]="passwordFormControl" formControlName="password" placeholder="Ingresar Contraseña ">
+                        <button class="text-light " mat-icon-button matSuffix (click)="hide=! hide " [attr.aria-label]=" 'Hide password' " [attr.aria-pressed]="hide ">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                        <mat-error *ngIf="passwordFormControl.hasError( 'minlength') && !passwordFormControl.hasError( 'required') " class="text-warning ">
+                            Contraseña No Válida
+                        </mat-error>
+
+                        <mat-error *ngIf="passwordFormControl.hasError( 'required') " class="text-warning ">
+                            Campo Obligatorio
+                        </mat-error>
+
+                    </mat-form-field>
+
+                </div>
+
+                <input type="submit" name=" " value="Ingresar" [disabled]="!loginForm.valid">
+
+                <div class="row ">
+                    <div class="col-lg-12 ">
+                        <a mat-button href="# " class="text-light float-lg-end float-sm-end">¿Olvidó su Contraseña?</a>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+
+</section>
