@@ -1,10 +1,9 @@
-h4{
+h4 {
     font-size: 1.3rem;
     font-weight: 700;
     text-transform: uppercase;
-    
 }
-.navbar{
-    
-    background-color: lightslategray;
+
+.navbar {
+    background-color: #444444;
 }

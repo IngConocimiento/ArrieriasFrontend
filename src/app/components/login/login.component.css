@@ -1,12 +1,11 @@
 .fondo-login {
     padding: calculateRem(15px);
-    background-image: url('/assets/img/fondo_login.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 .box {
-    background: #144c6c;
+    background: #444444;
     text-align: center;
     border: solid 0.1rem #000;
     border-radius: 3%;
