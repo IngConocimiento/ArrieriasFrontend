@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'list', component: ListHouseComponent},
   {path: 'listMember/:valor', component: ListMemberComponent},
-  {path: '**', redirectTo: ''}
+  {path: '**', redirectTo: 'list'}
 ];
 
 @NgModule({
